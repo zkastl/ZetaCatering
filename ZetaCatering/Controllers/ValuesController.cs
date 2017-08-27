@@ -3,12 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ZetaCatering.Model;
 
 namespace ZetaCatering.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        Product[] Products = new Product[]
+        {
+            new Product { Id = 1, Name = "Tomato Soup", Category = "Groceries", Price = 1 },
+            new Product { Id = 2, Name = "Yo-yo", Category = "Toys", Price = 3.75M },
+            new Product { Id = 3, Name = "Hammer", Category = "Hardware", Price = 16.99M }
+        };
+
+        public IEnumerable<Product> GetAllProducts() => Products;
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
