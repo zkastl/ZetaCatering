@@ -21,9 +21,9 @@ namespace ZetaCatering.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Product> Get()
         {
-            return new string[] { "value1", "value2" };
+            return GetAllProducts();
         }
 
         // GET api/values/5
