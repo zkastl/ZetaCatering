@@ -7,17 +7,17 @@ namespace ZetaCatering.Model
 {
     public class Guest
     {
-        private int GuestId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int GuestNumber { get; set; }
-        public List<int> SameTable { get; set; }
-        public List<int> NotSameTable { get; set; }
-        public Table AssignedTable { get; set; }
-        public int TableNumber { get; set; }
-        public int EventId { get; set; }
-        public PartyEvent Party { get; set; }
-        public string GuestComments { get; set; }
+        public int GuestId { get; internal set; }
+        public string FirstName { get; internal set; }
+        public string LastName { get; internal set; }
+        public int GuestNumber { get; internal set; }
+        public List<int> SameTable { get; internal set; }
+        public List<int> NotSameTable { get; internal set; }
+        public Table AssignedTable { get; internal set; }
+        public int TableNumber { get; internal set; }
+        public long EventId { get; internal set; }
+        public PartyEvent Party { get; internal set; }
+        public string GuestComments { get; internal set; }
 
         public Guest() {}
 
